@@ -44,5 +44,5 @@ for channel in channelIDs['channelIDs']:
         requests.post(os.getenv('WEBHOOK_URL'),
                       data={"username": "YouTube mailman", "avatar_url": os.getenv('BOT_AVATAR_URL'),
                             "content": message})
-print('A check has been performed at ' + str())
+print('A check has been performed at ' + str(datetime.datetime.now()))
 # print(results.items[0].snippet.title)
