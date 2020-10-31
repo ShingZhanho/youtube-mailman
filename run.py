@@ -9,6 +9,7 @@ import random
 
 api = pyyoutube.Api(api_key=os.getenv('YOUTUBE_API_TOKEN'))  # initializes a new api object
 last_check = None
+print('YouTube mailman is now working...')
 
 while True:
     if last_check is None:  # wait for the first time
@@ -46,8 +47,7 @@ while True:
                           data={"username": "YouTube mailman",
                                 "avatar_url": os.getenv('BOT_AVATAR_URL'),
                                 "content": message})
-        else:
-            print("在" + str(time.time()) + "進行了檢查，沒有發現新影片。")
-        last_check = time.time()
-        # print(results.items[0].snippet.title)
+    last_check = time.time()
+    print('在' + str(last_check) + '完成了一次檢查')
+    # print(results.items[0].snippet.title)
     utils.wait_for_ten_mins()
