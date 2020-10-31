@@ -16,7 +16,7 @@ while True:
     # reset_count is designed for not exceeding google cloud quota and not to trigger heroku 60 seconds error
     if reset_count != 180:
         reset_count += 1
-        print("\rReset count: " + str(reset_count) + " out of 180", end='')
+        print("Reset count: " + str(reset_count) + " out of 180")
         utils.wait_for_ten_mins()
         continue
     else:
