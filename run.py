@@ -8,7 +8,7 @@ import json
 import random
 
 api = pyyoutube.Api(api_key=os.getenv('YOUTUBE_API_TOKEN'))  # initializes a new api object
-last_check = datetime.datetime.timestamp(datetime.datetime.now() - datetime.timedelta(hours=1))
+last_check = datetime.datetime.timestamp(datetime.datetime.now() - datetime.timedelta(minutes=30))
 print('YouTube mailman starts')
 
 # gets the list of channels to check
