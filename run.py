@@ -3,7 +3,6 @@ import pyyoutube
 import time
 import datetime
 import requests
-import utils
 import json
 import random
 
@@ -44,5 +43,7 @@ for channel in channelIDs['channelIDs']:
         requests.post(os.getenv('WEBHOOK_URL'),
                       data={"username": "YouTube mailman", "avatar_url": os.getenv('BOT_AVATAR_URL'),
                             "content": message})
+    else:
+        print('Channel ' + channel + ' has no new videos')
 print('A check has been performed at ' + str(datetime.datetime.now()))
 # print(results.items[0].snippet.title)
